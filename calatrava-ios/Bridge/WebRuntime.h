@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
 #import "JsRuntime.h"
-
+#import "BridgeJSProtocol.h"
 #import <UIKit/UIKit.h>
 
-@interface WebRuntime : NSObject<JsRuntime, UIWebViewDelegate>
+@interface WebRuntime : NSObject<JsRuntime, UIWebViewDelegate,BridgeJSProtocol>
 {
   UIWebView *rtWebView;
   BOOL isLoadingHtml;
