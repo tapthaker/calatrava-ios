@@ -3,19 +3,19 @@
 
 @protocol BridgeJSProtocol <JSExport>
 
-- (id)changeToPage:(NSString *)target;
-- (id)registerProxy:(NSString *)proxy forPage:(NSString *)name;
-- (id)attachHandlerTo:(NSString *)proxy forEvent:(NSString *)name;
-- (id)valueFrom:(NSString *)proxy forField:(NSString *)field returnedTo:(NSString *)getId;
-- (id)render:(NSString *)proxy with:(NSDictionary *)dataMsg;
-- (id)requestFrom:(NSString *)reqId
+- (void)changeToPage:(NSString *)target;
+- (void)registerProxy:(NSString *)proxy forPage:(NSString *)name;
+- (void)attachHandlerTo:(NSString *)proxy forEvent:(NSString *)name;
+- (void)valueFrom:(NSString *)proxy forField:(NSString *)field returnedTo:(NSString *)getId;
+- (void)render:(NSString *)proxy with:(NSDictionary *)dataMsg;
+- (void)requestFrom:(NSString *)reqId
               url:(NSString *)url
                as:(NSString *)method
              with:(NSString *)body
           headers:(NSDictionary *)headers;
-- (id)openUrl:(NSString *)url;
-- (id)startTimer:(NSString *)timerId timeout:(int)timeout;
-- (id)callPlugin:(NSString *)plugin
+- (void)openUrl:(NSString *)url;
+- (void)startTimer:(NSString *)timerId timeout:(int)timeout;
+- (void)callPlugin:(NSString *)plugin
           method:(NSString *)method
         withArgs:(NSDictionary *)args;
 

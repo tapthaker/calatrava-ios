@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "JsRuntime.h"
+#import "BridgeJSProtocol.h"
 
-@interface JSCoreRuntime : NSObject<JsRuntime>{
+@interface JSCoreRuntime : NSObject<JsRuntime, BridgeJSProtocol> {
     
     BOOL isLoadingHtml;
     int outstandingScriptLoads;
