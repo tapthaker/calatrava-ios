@@ -1,11 +1,3 @@
-//
-//  JSCoreRuntime.m
-//  Pods
-//
-//  Created by Tapan Thaker on 26/03/15.
-//
-//
-
 #import "JSCoreRuntime.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
