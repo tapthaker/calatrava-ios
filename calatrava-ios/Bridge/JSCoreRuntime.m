@@ -13,19 +13,11 @@
 
 @implementation JSCoreRuntime
 
-@synthesize pageDelegate;
-@synthesize timerDelegate;
-@synthesize requestDelegate;
-@synthesize uiDelegate;
-@synthesize pluginDelegate;
-
 - (id)init
 {
     if (self = [super init])
     {
         context = [[JSContext alloc]init];
-        filesToLoad = [[NSMutableArray alloc] init];
-        functionsToCall = [[NSMutableArray alloc] init];
         context[@"nativeRuntime"] = self;
     }
     return self;
