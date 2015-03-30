@@ -57,24 +57,6 @@ calatrava.bridge.runtime = {
   }
 };
 
-//var methods = ["log",
-//  "attachProxyEventHandler",
-//  "startTimerWithTimeout",
-//  "openUrl",
-//  "callPlugin"];
-//
-//for (m in methods) {
-//  if (methods.hasOwnProperty(m)) {
-//    (function(method) {
-//      calatrava.bridge.runtime[method] = function() {
-//        var callArgs = [method].concat(_.toArray(arguments));
-//        calatrava.bridge.native.call.apply(calatrava.bridge.native, callArgs);
-//      };
-//    }(methods[m]));
-//  }
-//}
-//
-
 calatrava.bridge.runtime.callPlugin = function (pluginName, method, argMessage) {
     nativeRuntime.callPluginMethodWithArgs(pluginName,method,argMessage);
 }
@@ -97,6 +79,14 @@ calatrava.bridge.runtime.valueOfProxyField = function(proxyId, field, event) {
 
 calatrava.bridge.runtime.log = function(log) {
     nativeRuntime.log(log);
+}
+
+calatrava.bridge.runtime.startTimerWithTimeout = function(timerId, timeout) {
+    nativeRuntime.startTimerTimeout(timerId, timeout);
+}
+
+calatrava.bridge.runtime.openUrl = function(url) {
+    nativeRuntime.openUrl(url);
 }
 
 calatrava.bridge.support = {
